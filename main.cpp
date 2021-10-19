@@ -7,13 +7,13 @@ int main() {
   string print;
   int count = 0;
   while(getline(cin, x)) {
-  	print += removeLeadingSpaces(x);
-	print += "\n";
-	count += countChar(x, '{');
-        count -= countChar(x, '}');
+	count -= countChar(x, '}');
 	for(int i = 0; i < count; i++) {
-		print += "\t";
-	}
+                print += "\t";
+        }
+  	print += removeLeadingSpaces(x);
+	count += countChar(x, '{');
+	print += "\n";
   }
   cout << print << endl;
   return 0;
