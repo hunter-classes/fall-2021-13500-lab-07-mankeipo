@@ -4,17 +4,28 @@ using namespace std;
 
 int main() {
   string x;
-  string print;
-  int count = 0;
+  //string print;
+  int count1 = 0;
+  int count2 = 0;
   while(getline(cin, x)) {
-	count -= countChar(x, '}');
-	for(int i = 0; i < count; i++) {
-                print += "\t";
+	bool swap = false;
+	x = removeLeadingSpaces(x);
+	if(x[0] == '}') {
+		count2++;
+		swap = true;
+	}
+	for(int i = 0; i < count1 - count2; i++) {
+                x = "\t" + x;
         }
-  	print += removeLeadingSpaces(x);
-	count += countChar(x, '{');
-	print += "\n";
+	if(swap){
+		count2--;
+		count2 += countChar(x, '}');
+	} else {
+		count2 += countChar(x, '}');
+	}
+	count1 += countChar(x, '{');
+	cout << x << endl;
   }
-  cout << print << endl;
+  //cout << print << endl;
   return 0;
 }

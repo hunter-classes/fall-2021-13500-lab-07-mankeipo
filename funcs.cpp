@@ -15,10 +15,11 @@ string removeLeadingSpaces(string line) {
 }
 
 int countChar(string line, char c) {
+  int num = 0;
   for(int i = 0; i < line.length(); i++) {
   	if(line[i] == c) {
-		return 1;
+		num++;
 	}
   }
-  return 0;
+  return num;
 }
