@@ -1,4 +1,4 @@
-//hello im kirsten shyu ! 
+
 
 #include <iostream>
 using namespace std;
