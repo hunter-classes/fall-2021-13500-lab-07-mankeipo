@@ -1,3 +1,5 @@
+//hi im kirsten shyu
+
 #include <iostream>
 using namespace std;
 #include "funcs.h"
